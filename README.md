@@ -1,5 +1,5 @@
 # qtpy-screen_adaptive
-Non-intrusive window adaptation implemented by Python decorators.
+Non-intrusive PyQt/PySide window adaptation implemented by Python decorators.
 
 # Problem solved
 Qt components and layouts cannot adapt to changes in window size, and the component stretching and sizing strategies provided by Qt are not convenient to use.
