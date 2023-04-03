@@ -1,7 +1,7 @@
 import sys
 
-from PyQt5.QtGui import QPixmap
-from PyQt5.QtWidgets import QPushButton, QApplication, QLabel, QLineEdit, QWidget, QFrame, QHBoxLayout
+from qtpy.QtGui import QPixmap
+from qtpy.QtWidgets import QPushButton, QApplication, QLabel, QLineEdit, QWidget, QFrame, QHBoxLayout
 
 from QFlowLayout import QFlowLayout
 from QScreenAdaptive import QKeepAspectRatio, QTextAdaptive, QImageAdaptive
@@ -17,10 +17,10 @@ class MyWidget(QWidget):
         self.layout = QFlowLayout(self)
         self.setMinimumSize(640, 480)
         for i in range(10):
-            button = QPushButton('按钮' + str(i))
+            button = QPushButton('Button' + str(i))
             image = QLabel()
             image.setFixedSize(80, 80)
-            text = QLabel('<div>123</div>')
+            text = QLabel('<div>Text</div>')
             pixmap = QPixmap('img.png').scaled(image.width(), image.height())
             image.setPixmap(pixmap)
             line_edit = QLineEdit()
