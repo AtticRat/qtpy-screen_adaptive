@@ -1,5 +1,5 @@
-from PyQt5.QtGui import QResizeEvent, QPixmap
-from PyQt5.QtWidgets import QLayout, QHBoxLayout, QVBoxLayout
+from qtpy.QtGui import QResizeEvent, QPixmap
+from qtpy.QtWidgets import QLayout, QHBoxLayout, QVBoxLayout
 
 
 def QTransformation(origin_cls):
