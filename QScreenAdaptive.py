@@ -149,7 +149,7 @@ def QTextAdaptive(origin_cls):
                                     font.setPixelSize(15)
                                 child.init_font = font
                             font = child.font()
-                            pixel_size = child.init_font.pixelSize() * ratio
+                            pixel_size = int(child.init_font.pixelSize() * ratio)
                             font.setPixelSize(pixel_size)
                             child.setFont(font)
 
@@ -196,7 +196,7 @@ def QImageAdaptive(origin_cls):
                             if not hasattr(child, 'init_pixmap'):
                                 child.init_pixmap = QPixmap(child.pixmap())
 
-                            pixmap = child.init_pixmap.scaled(child.init_pixmap.size().width()*ratio,child.init_pixmap.size().height()*ratio)
+                            pixmap = child.init_pixmap.scaled(int(child.init_pixmap.size().width()*ratio),int(child.init_pixmap.size().height()*ratio))
                             child.setPixmap(pixmap)
                         for_each(child)
 
